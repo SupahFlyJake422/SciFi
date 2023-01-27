@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>SupahFlySci-Fi</title>
+<style> 
+
+h1{
+	positon: absolute; 
+	top: 0px; 
+	
+	
+	width: 3600px;	
+
+	text-shadow:
+	-1px 0px 0px gray,
+	1px 0px 0px white,
+	0px -1px 0px white,
+	0px 1px 0px white;
+	
+	background-color: green;
+}
+
+
+	
+#div{	
+
+	border: solid 2px; 
+	border-color: black;   
+	position: absolute;
+	left: 900px;
+	
+	height: 2400px;
+	width:720px;
+
+	inline-size: 500px;
+	overflow-wrap: break-word;
+}
+
+#obj{
+	height:2400px;
+	width:720px;
+
+	overflow-wrap: break-word;
+}
+
+</style></head>
+<body>
+<script>
+
+//Variables
+arr1 = [];
+arr2 = [];
+
+function arr(file){
+
+	fileSelector = document.getElementById("");
+	fileSelector.addEventListener('change', (event) => {
+	const fileList = event.target.files;
+    
+	console.log(fileList);
+  });
+
+}
+
+function menuSel(x){	
+	
+	sel = document.getElementById("div");
+	obj = document.getElementById("obj");
+	
+	if(x == 0)
+	{
+		sel.textContent = 'Check out the comment section';
+	}
+	else if(x == 1)
+	{
+		obj.data = "jailbreak.txt";
+		sel.textContent = 'here are the comments for Jailbreak';	
+	}
+	else if(x == 2)
+	{
+		obj.data = "gRD.txt";	
+		sel.textContent = 'in the prototype, it is unnecessary';
+	}
+	else if(x == 3)
+	{
+		sel.textContent = 'but it does function';
+
+	}
+	else if(x == 4)
+	{
+		obj.data = "comenaut01.txt";
+		sel.textContent = 'here is how it works<br> the user clicks on a comment they would wish to include or else make an original comment by selecting the comment section. From there, the user is prompted to elaborate within a fully-manageable dialogue optimization tool. FM-DOT allows the user to move it around the screen or expand into a full page and write on different screens and such. Try it!';
+
+	}
+}
+
+function comment()
+{
+	var comment = prompt("What is your comment", null);
+
+	if (name == null) 
+	{
+		alert("no text entered");
+	}
+	else
+	{
+    		document.getElementById("div").innerHTML = "what really needs to happen is that your comment adds on, for now, what you said was: "+ comment;	
+	}	
+}
+
+</script>
+
+
+
+<h1>A Monthly Science Fiction Digest<br>
+By Jacob Mark Jackson </h1>
+
+
+<table>
+<tr><button onclick = "menuSel('0')">Main</button></tr>
+<tr><button onclick = "menuSel('1')">Jailbreak</button></tr>
+<tr><button onclick = "menuSel('2')">The Giant Robot Debate</button></tr>
+
+<tr><button onclick = "menuSel('3')">Armageddon Insects</button></tr>
+
+<tr><button onclick = "menuSel('4')">The Comenaut</button></tr>
+</table>
+
+<div id ="div" onclick="comment()"></div>
+
+<object id = "obj" 
+    	data="coGuid.txt">
+</object>
+
+</body>
+</html>
